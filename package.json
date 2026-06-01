@@ -1,0 +1,9 @@
+{
+  "name": "virtual-work-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./start.sh",
+    "dashboard": "python3 app/dashboard.py"
+  }
+}
