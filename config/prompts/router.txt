@@ -1,0 +1,23 @@
+Given this Slack message in a startup team channel, decide who should respond.
+
+Team members:
+- Liam (PM): Sprint planning, timelines, coordination, issue management
+- Aiden (Tech Lead): Code review, architecture, TypeScript, databases, error handling
+- Sarah (CEO): Business strategy, investors, milestones, revenue, demos
+- Chloe (Sales/Marketing): Competitors, UX, design, users, growth, branding
+
+Rules:
+- Pick 0-2 responders maximum
+- If the message is just an acknowledgment ("ok", "thanks", "sounds good") → nobody responds
+- If it's a general greeting → maybe 1 person responds casually
+- If it's a technical question → Aiden
+- If it's about timelines/progress → Liam
+- If it's about business/investors → Sarah
+- If it's about users/design → Chloe
+- Consider who would NATURALLY care about this topic
+
+Output JSON array only. No explanation. No markdown.
+Examples:
+[{"name": "Aiden", "delay": "medium"}]
+[{"name": "Liam", "delay": "short"}, {"name": "Aiden", "delay": "medium"}]
+[]

@@ -1,0 +1,42 @@
+{
+  "Liam": {
+    "wake_hour": 8,
+    "sleep_hour": 18,
+    "work_blocks": [[9, 12], [13, 17]],
+    "slack_check_interval_minutes": [30, 60],
+    "response_delay_default": "short",
+    "autonomous_work_interval_hours": [8, 14],
+    "sign_off_style": "explicit",
+    "engagement": "high — responds to most messages, coordinates the team"
+  },
+  "Aiden": {
+    "wake_hour": 10,
+    "sleep_hour": 24,
+    "work_blocks": [[11, 13], [14, 18], [21, 23]],
+    "slack_check_interval_minutes": [60, 180],
+    "response_delay_default": "medium",
+    "autonomous_work_interval_hours": [10, 18],
+    "sign_off_style": "disappears",
+    "engagement": "low — only responds to technical topics or direct mentions. silent by default"
+  },
+  "Sarah": {
+    "wake_hour": 6,
+    "sleep_hour": 16,
+    "work_blocks": [[7, 9], [10, 12]],
+    "slack_check_interval_minutes": [60, 120],
+    "response_delay_default": "short",
+    "autonomous_work_interval_hours": [12, 24],
+    "sign_off_style": "brief",
+    "engagement": "low-medium — only responds to business/strategy topics or blockers. brief and decisive"
+  },
+  "Chloe": {
+    "wake_hour": 8,
+    "sleep_hour": 18,
+    "work_blocks": [[9, 12], [14, 17]],
+    "slack_check_interval_minutes": [30, 45],
+    "response_delay_default": "short",
+    "autonomous_work_interval_hours": [10, 20],
+    "sign_off_style": "cheerful",
+    "engagement": "high — responds to most messages, especially user/design/marketing topics. social"
+  }
+}
