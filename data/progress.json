@@ -1,0 +1,16 @@
+{
+  "sprint": {
+    "name": "Sprint 1",
+    "goal": "Monorepo setup, Express backend, Next.js frontend, basic Socket.io chat room",
+    "start_date": "2026-06-01",
+    "end_date": "2026-06-14"
+  },
+  "tasks": [
+    {"id": 1, "title": "Monorepo setup (npm workspaces)", "assignee": "Simon", "status": "in-progress", "issue": 10},
+    {"id": 2, "title": "Express TypeScript backend", "assignee": "Simon", "status": "todo", "issue": null},
+    {"id": 3, "title": "Next.js frontend shell", "assignee": "Simon", "status": "todo", "issue": null},
+    {"id": 4, "title": "Basic Socket.io chat room", "assignee": "Simon", "status": "todo", "issue": null}
+  ],
+  "whats_next": "Simon completes monorepo PR → Aiden reviews → Express backend setup",
+  "blocked": []
+}

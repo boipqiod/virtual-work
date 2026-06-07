@@ -1,0 +1,97 @@
+I0608 00:09:01.873509 91469 server.go:1301] Starting language server process with pid 91469
+I0608 00:09:01.875236 91469 server.go:484] Language server will attempt to listen on host localhost
+I0608 00:09:01.877322 91469 server.go:498] Language server listening on random port at 60200 for HTTPS (gRPC)
+I0608 00:09:01.877597 91469 server.go:505] Language server listening on random port at 60202 for HTTP
+W0608 00:09:02.140933 91469 launchmanager.go:69] Entering local chrome mode! This is WRONG unless you are running tests or in eval mode on Linux.
+I0608 00:09:02.143855 91469 manager.go:92] Creating trajectory store manager with proto store and SQLite store
+E0608 00:09:02.146645 91469 log.go:398] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+W0608 00:09:02.147072 91469 log_context.go:117] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.147101 91469 log.go:398] error getting token source: You are not logged into Antigravity.
+W0608 00:09:02.147305 91469 log_context.go:117] Cache(availableModels): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.147333 91469 log.go:398] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.147517 91469 log.go:398] Failed to poll FetchAvailableModels: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0608 00:09:02.151936 91469 server.go:2303] Auth succeeded, refreshing features and managers
+E0608 00:09:02.151989 91469 log.go:398] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+W0608 00:09:02.152160 91469 log_context.go:117] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.152183 91469 log.go:398] error getting token source: You are not logged into Antigravity.
+W0608 00:09:02.152391 91469 log_context.go:117] Cache(availableModels): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.152410 91469 log.go:398] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.152591 91469 log.go:398] Failed to poll FetchAvailableModels: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0608 00:09:02.152737 91469 server.go:2309] State refresh took 0ms
+I0608 00:09:02.154818 91469 server.go:1961] initialized server successfully in 280.855417ms
+I0608 00:09:02.155190 91469 auto_updater.go:207] Last check was less than 15 minutes ago, skipping update
+I0608 00:09:02.155245 91469 common.go:104] Launching CLI mode
+E0608 00:09:02.155259 91469 common.go:123] Failed to resolve GeminiDir ".gemini": .gemini must be an absolute path: path is not absolute, falling back to default
+I0608 00:09:02.155279 91469 common.go:154] CLI app data directory: /Users/kong/.gemini/antigravity-cli
+I0608 00:09:02.155365 91469 server.go:211] Creating CLI server backend: product=antigravity workspaceDirs=[/Users/kong/Desktop/Develop/VirtualWork/virtual-work] appDataDir=/Users/kong/.gemini/antigravity-cli cascadeManager=true codeAssist=true
+W0608 00:09:02.155501 91469 log_context.go:117] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.155534 91469 log.go:398] error getting token source: You are not logged into Antigravity.
+W0608 00:09:02.155803 91469 log_context.go:117] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E0608 00:09:02.155834 91469 log.go:398] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+I0608 00:09:02.155833 91469 project.go:153] project: discovered project "/Users/kong/Desktop/Develop/VirtualWork/virtual-work" (id=494ae956-a22c-47df-8445-3148d45faf2d) via cache
+I0608 00:09:02.155921 91469 server.go:1356] Backend project ID updated dynamically to: 494ae956-a22c-47df-8445-3148d45faf2d
+E0608 00:09:02.155978 91469 server.go:617] Failed to get OAuth token: error getting token source from auth provider: You are not logged into Antigravity.
+W0608 00:09:02.155994 91469 client.go:81] failed to set auth token
+I0608 00:09:02.157726 91469 printmode.go:82] Print mode: starting (promptLength=30, model="", conversationID="")
+I0608 00:09:02.157809 91469 manager.go:267] Initializing CLI store manager for workspace /Users/kong/Desktop/Develop/VirtualWork/virtual-work
+I0608 00:09:02.158756 91469 cli_setting_manager.go:127] applyUserSettings: stored shared config permissions: allow=32 deny=0 ask=0 from /Users/kong/.gemini/config/config.json
+I0608 00:09:02.158815 91469 cli_setting_manager.go:655] Skipping telemetry propagation because user is not logged in
+I0608 00:09:02.158825 91469 cli_setting_manager.go:79] CLI settings initialized: permissions=&{Allow:[command(which) command(npm run) command(npx)] Deny:[] Ask:[]}, toolPermission=request-review
+I0608 00:09:02.159058 91469 manager.go:372] CLI store manager initialized successfully
+I0608 00:09:02.159106 91469 printmode.go:181] Print mode: not authenticated, trying silent auth
+I0608 00:09:02.374819 91469 auth.go:114] ChainedAuth: authenticated via keyring (effective: keyring)
+I0608 00:09:02.374841 91469 server_oauth.go:212] applyAuthResult: email=boipqiod@gmail.com, authMethod=consumer, quotaProject=
+I0608 00:09:02.374848 91469 server_oauth.go:217] OAuth: authenticated successfully as boipqiod@gmail.com
+I0608 00:09:02.374853 91469 server_oauth.go:223] b.codeAssistClient.AuthProvider (0x71f0de126b00) is same as b.cliAuth (0x71f0de126b00)
+I0608 00:09:03.763449 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x7956750490ea7f77
+I0608 00:09:04.285578 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels Trace: 0xbcb84947a13c16ff
+I0608 00:09:04.290802 91469 model_config_manager.go:157] Propagating selected model override to backend: label="Gemini 3.5 Flash (High)"
+I0608 00:09:04.992642 91469 printmode.go:183] Print mode: silent auth succeeded
+I0608 00:09:04.992812 91469 input_loop.go:510] Auth done received, triggering experiment refresh
+I0608 00:09:04.992887 91469 experiment_manager.go:35] Starting experiment refresh after login
+I0608 00:09:05.269434 91469 experiment_manager.go:39] Experiments refreshed after login
+I0608 00:09:05.269515 91469 manager.go:1205] Reloading system slash commands
+I0608 00:09:05.269539 91469 conversation_manager.go:291] Starting new conversation (agent=false)
+I0608 00:09:05.269559 91469 server.go:722] Creating new cascade trajectory (agentScript=false)
+I0608 00:09:05.269568 91469 server.go:725] Conversation using project ID: 494ae956-a22c-47df-8445-3148d45faf2d
+I0608 00:09:05.275399 91469 server.go:753] Created conversation 272d9b83-3c41-43cd-8bc3-08c669f636bb
+I0608 00:09:05.276136 91469 server.go:2062] GetConversationDetail: found conversation 272d9b83-3c41-43cd-8bc3-08c669f636bb (active=true)
+I0608 00:09:05.276169 91469 conversation_manager.go:320] project: switching to conversation belonging to project ID: 494ae956-a22c-47df-8445-3148d45faf2d
+I0608 00:09:05.276261 91469 server.go:1356] Backend project ID updated dynamically to: 494ae956-a22c-47df-8445-3148d45faf2d
+I0608 00:09:05.276277 91469 cli_setting_manager.go:192] ApplyProjectPermissionGrants: no grants for project "/Users/kong/Desktop/Develop/VirtualWork/virtual-work", cleared project permissions
+E0608 00:09:05.276362 91469 conversation_manager.go:363] project: failed to add project resource folder "/Users/kong/Desktop/Develop/VirtualWork/virtual-work" to workspace dynamically: failed to add workspace folder /Users/kong/Desktop/Develop/VirtualWork/virtual-work: uri: file:///Users/kong/Desktop/Develop/VirtualWork/virtual-work: path is already tracked
+I0608 00:09:05.276500 91469 conversation_manager.go:371] project: synced active project to "/Users/kong/Desktop/Develop/VirtualWork/virtual-work" (id=494ae956-a22c-47df-8445-3148d45faf2d) and updated workspace cache
+I0608 00:09:05.276509 91469 conversation_manager.go:459] Streaming conversation 272d9b83-3c41-43cd-8bc3-08c669f636bb
+I0608 00:09:05.276686 91469 server.go:772] Starting conversation update stream for 272d9b83-3c41-43cd-8bc3-08c669f636bb
+I0608 00:09:05.276704 91469 printmode.go:147] Print mode: conversation=272d9b83-3c41-43cd-8bc3-08c669f636bb, sending message
+I0608 00:09:05.276713 91469 conversation_manager.go:402] Forwarding user message to conversation 272d9b83-3c41-43cd-8bc3-08c669f636bb (items=1, media=0)
+I0608 00:09:05.276720 91469 server.go:1074] Sending user message to conversation 272d9b83-3c41-43cd-8bc3-08c669f636bb (items=1, media=0)
+I0608 00:09:06.320355 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x7c1c07627dc98c99
+I0608 00:09:07.175209 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x101a133b3fcbe3b7
+I0608 00:09:07.514826 91469 text_drip.go:173] Drip stopped: lastStepIdx=2, charIdx=121, length=121
+I0608 00:09:07.734449 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0x91cb00f9b89aa5f
+I0608 00:09:07.969450 91469 model_config_manager.go:157] Propagating selected model override to backend: label="Gemini 3.5 Flash (High)"
+I0608 00:09:07.969627 91469 model_config_manager.go:157] Propagating selected model override to backend: label="Gemini 3.5 Flash (High)"
+I0608 00:09:08.371566 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x58a68b0fbbe9ba80
+I0608 00:09:08.545928 91469 input_loop.go:510] Auth done received, triggering experiment refresh
+I0608 00:09:08.546023 91469 experiment_manager.go:35] Starting experiment refresh after login
+I0608 00:09:08.630562 91469 input_loop.go:510] Auth done received, triggering experiment refresh
+I0608 00:09:08.630677 91469 experiment_manager.go:35] Starting experiment refresh after login
+I0608 00:09:08.789904 91469 experiment_manager.go:39] Experiments refreshed after login
+I0608 00:09:08.790015 91469 manager.go:1205] Reloading system slash commands
+I0608 00:09:08.791050 91469 manager.go:1209] Slash commands unchanged, skipping update
+I0608 00:09:08.795617 91469 model_config_manager.go:157] Propagating selected model override to backend: label="Gemini 3.5 Flash (High)"
+I0608 00:09:08.821750 91469 experiment_manager.go:39] Experiments refreshed after login
+I0608 00:09:08.821925 91469 manager.go:1205] Reloading system slash commands
+I0608 00:09:08.823379 91469 manager.go:1209] Slash commands unchanged, skipping update
+I0608 00:09:09.414132 91469 input_loop.go:510] Auth done received, triggering experiment refresh
+I0608 00:09:09.414199 91469 experiment_manager.go:35] Starting experiment refresh after login
+I0608 00:09:09.575193 91469 experiment_manager.go:39] Experiments refreshed after login
+I0608 00:09:09.575470 91469 manager.go:1205] Reloading system slash commands
+I0608 00:09:09.577812 91469 manager.go:1209] Slash commands unchanged, skipping update
+I0608 00:09:09.891752 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent?alt=sse Trace: 0x3658a5693bdff7ad
+I0608 00:09:09.943779 91469 text_drip.go:173] Drip stopped: lastStepIdx=5, charIdx=10, length=10
+I0608 00:09:10.072313 91469 http_helpers.go:183] URL: https://daily-cloudcode-pa.googleapis.com/v1internal:loadCodeAssist Trace: 0xfe4abb9d9eb1b6d6
+I0608 00:09:10.097239 91469 manager.go:513] CLI store manager shutting down
+I0608 00:09:10.099383 91469 conversation_manager.go:427] Stopping conversation stream
+I0608 00:09:10.099969 91469 server.go:2207] Language server shutting down

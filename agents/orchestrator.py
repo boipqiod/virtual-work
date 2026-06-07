@@ -385,21 +385,29 @@ class Orchestrator:
         if os.path.exists(os.path.join(WIKI_DIR, ".git")):
             # Already cloned — just pull
             try:
-                subprocess.run(
+                res = subprocess.run(
                     ["git", "-C", WIKI_DIR, "pull", "--quiet"],
                     capture_output=True, timeout=15
                 )
-                print("[Orchestrator] Wiki synced (pull).")
+                if res.returncode == 0:
+                    print("[Orchestrator] Wiki synced (pull).")
+                else:
+                    err_msg = res.stderr.decode(errors='ignore').strip()
+                    print(f"[Orchestrator] Wiki pull failed (code {res.returncode}): {err_msg}")
             except Exception as e:
                 print(f"[Orchestrator] Wiki pull failed: {e}")
         elif wiki_url:
             # First run — clone
             try:
-                subprocess.run(
+                res = subprocess.run(
                     ["git", "clone", wiki_url, WIKI_DIR],
                     capture_output=True, timeout=30
                 )
-                print(f"[Orchestrator] Wiki cloned to {WIKI_DIR}")
+                if res.returncode == 0:
+                    print(f"[Orchestrator] Wiki cloned to {WIKI_DIR}")
+                else:
+                    err_msg = res.stderr.decode(errors='ignore').strip()
+                    print(f"[Orchestrator] Wiki clone failed (code {res.returncode}): {err_msg}")
             except Exception as e:
                 print(f"[Orchestrator] Wiki clone failed: {e}")
         else:

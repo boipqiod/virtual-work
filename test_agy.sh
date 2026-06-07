@@ -45,13 +45,7 @@ else
     fail "not found in --help"
 fi
 
-# 1.3 --dangerously-skip-permissions 플래그
-echo -n "  1.3 --dangerously-skip-permissions: "
-if agy --help 2>&1 | grep -q "dangerously"; then
-    pass "exists"
-else
-    fail "not found in --help"
-fi
+# 1.3 (플래그 제거됨)
 
 # 1.4 -p 플래그
 echo -n "  1.4 -p (prompt) flag: "
@@ -63,7 +57,7 @@ fi
 
 # 1.5 기본 호출
 echo -n "  1.5 basic call: "
-BASIC=$(agy --dangerously-skip-permissions -p "Reply with exactly: HELLO_TEST" 2>/dev/null)
+BASIC=$(agy -p "Reply with exactly: HELLO_TEST" 2>/dev/null)
 if [ $? -eq 0 ] && [ -n "$BASIC" ]; then
     pass "got response (${#BASIC} chars)"
 else
@@ -72,7 +66,7 @@ fi
 
 # 1.6 --add-dir 동작
 echo -n "  1.6 --add-dir workspace: "
-ADDDIR=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p "List the Python files you can see. Reply briefly." 2>/dev/null)
+ADDDIR=$(agy --add-dir "$WORKSPACE" -p "List the Python files you can see. Reply briefly." 2>/dev/null)
 if [ $? -eq 0 ] && [ -n "$ADDDIR" ]; then
     pass "got response (${#ADDDIR} chars)"
 else
@@ -85,7 +79,7 @@ header "Level 2: 서브에이전트 @멘션"
 
 # 2.1 @liam 멘션
 echo -n "  2.1 @liam mention: "
-LIAM=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p "@liam What's the sprint looking like?" 2>/dev/null)
+LIAM=$(agy --add-dir "$WORKSPACE" -p "@liam What's the sprint looking like?" 2>/dev/null)
 LIAM_RC=$?
 if [ $LIAM_RC -eq 0 ] && [ -n "$LIAM" ]; then
     pass "got response (${#LIAM} chars)"
@@ -96,7 +90,7 @@ fi
 
 # 2.2 @aiden 멘션
 echo -n "  2.2 @aiden mention: "
-AIDEN=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p "@aiden Should we use WebSocket or SSE for real-time?" 2>/dev/null)
+AIDEN=$(agy --add-dir "$WORKSPACE" -p "@aiden Should we use WebSocket or SSE for real-time?" 2>/dev/null)
 AIDEN_RC=$?
 if [ $AIDEN_RC -eq 0 ] && [ -n "$AIDEN" ]; then
     pass "got response (${#AIDEN} chars)"
@@ -107,7 +101,7 @@ fi
 
 # 2.3 stderr 분리 확인
 echo -n "  2.3 stderr separation: "
-STDOUT=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p "@liam say ok" 2>/tmp/agy_stderr_test)
+STDOUT=$(agy --add-dir "$WORKSPACE" -p "@liam say ok" 2>/tmp/agy_stderr_test)
 STDERR=$(cat /tmp/agy_stderr_test 2>/dev/null)
 if [ -n "$STDERR" ]; then
     warn "stderr has content (${#STDERR} chars): ${STDERR:0:80}"
@@ -121,7 +115,7 @@ header "Level 3: 프롬프트 포맷 준수 (XML 태그)"
 
 # 3.1 generate_response 포맷
 echo -n "  3.1 XML tag output: "
-XMLTEST=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p '@liam
+XMLTEST=$(agy --add-dir "$WORKSPACE" -p '@liam
 
 You are Liam. Stay in character.
 Your engagement level: high. Your typical response speed: short.
@@ -156,7 +150,7 @@ echo "$XMLTEST" | head -20 | sed 's/^/       /'
 
 # 3.2 silence 결정
 echo -n "  3.2 silence decision: "
-SILENCE_TEST=$(agy --add-dir "$WORKSPACE" --dangerously-skip-permissions -p '@aiden
+SILENCE_TEST=$(agy --add-dir "$WORKSPACE" -p '@aiden
 
 You are Aiden. Stay in character.
 Your engagement level: low. Your typical response speed: medium.
@@ -188,7 +182,7 @@ header "Level 4: _call_ai_raw 시뮬레이션 (--add-dir 없이)"
 
 # 4.1 라우팅 JSON
 echo -n "  4.1 routing JSON: "
-ROUTE=$(agy --dangerously-skip-permissions -p 'You are a routing assistant. Output only JSON.
+ROUTE=$(agy -p 'You are a routing assistant. Output only JSON.
 
 ---
 
@@ -211,7 +205,7 @@ fi
 
 # 4.2 서브에이전트 미로딩 확인
 echo -n "  4.2 no subagent without --add-dir: "
-NO_SUB=$(agy --dangerously-skip-permissions -p "What agents do you have access to? Reply briefly." 2>/dev/null)
+NO_SUB=$(agy -p "What agents do you have access to? Reply briefly." 2>/dev/null)
 if echo "$NO_SUB" | grep -qi "liam\|aiden\|sarah\|chloe"; then
     warn "agents mentioned (might be from prompt context, not loaded)"
 else

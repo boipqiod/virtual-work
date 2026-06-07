@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "virtual-office": {
+      "command": "python3",
+      "args": ["tools/mcp_server.py"],
+      "env": {
+        "DB_PATH": "data/memory.db",
+        "PROGRESS_PATH": "data/progress.json",
+        "WIKI_DIR": "shout_wiki",
+        "GITHUB_REPO": "boipqiod/shout"
+      }
+    }
+  }
+}

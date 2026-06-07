@@ -106,10 +106,10 @@ Virtual Office는 AI 에이전트 4명(Liam/PM, Aiden/Tech Lead, Sarah/CEO, Chlo
 
 ```python
 # 서브에이전트 호출 (페르소나 적용)
-agy --add-dir {workspace} --dangerously-skip-permissions -p "@{agent_name}\n\n{prompt}"
+agy --add-dir {workspace} -p "@{agent_name}\n\n{prompt}"
 
 # Raw 호출 (라우팅, 압축 등 — 서브에이전트 미로딩)
-agy --dangerously-skip-permissions -p "{system_prompt}\n\n---\n\n{user_prompt}"
+agy -p "{system_prompt}\n\n---\n\n{user_prompt}"
 ```
 
 ### 동작 원리

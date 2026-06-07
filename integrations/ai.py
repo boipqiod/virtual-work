@@ -134,7 +134,6 @@ class AIClient:
                 [
                     "agy",
                     "--add-dir", WORKSPACE_DIR,
-                    "--dangerously-skip-permissions",
                     "-p", prompt,
                 ],
                 cwd=WORKSPACE_DIR,
@@ -225,7 +224,6 @@ class AIClient:
                 proc = subprocess.Popen(
                     [
                         "agy",
-                        "--dangerously-skip-permissions",
                         "-p", full_prompt,
                     ],
                     stdout=subprocess.PIPE,
